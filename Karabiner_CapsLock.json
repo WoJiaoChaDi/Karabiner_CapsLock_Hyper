@@ -20,7 +20,7 @@
       /*   | * |    CapsLock + 3/4                       || 滚轮↑/↓(option 滚轮←/→)                                       ;*/
       /*   | * |    CapsLock + A/Z                       || PgUp/PgDn(Option PgUp/PgDn选择 | Ctrl -> Ctrl+PgUp/PgDn)      ;*/
       /*   | * |    CapsLock + W/R                       || 删除光标前后(Ctrl 删除全部/Alt 按单词删除)                    ;*/
-      /*   | * |    CapsLock + Space/H                   || Enter                                                         ;*/
+      /*   | * |    CapsLock + Space                     || Enter                                                         ;*/
       /*   | * |    CapsLock + ↑/↓/←/→/RCtrl/RShift      || 映射鼠标移动/左键/右键                                        ;*/
       /*   | * |    CapsLock + F1/F2/F3/F4/F5/F6/F11/F12 || 媒体控制(静音/音量+/音量-/暂停/下一首/停止/屏幕亮度-/屏幕亮度+)  ;*/
       /*   | * |    CapsLock + Q                         || Cmd + W (Option Cmd + Q)                                      ;*/
@@ -1709,32 +1709,13 @@
 
 
       /*=============================================================================================*/
-      /*                              CapsLock + Space/H || Enter                                   ;*/
+      /*                              CapsLock + Space || Enter                                   ;*/
       {
-          "description": "CapsLock + Space/h || Enter",
+          "description": "CapsLock + Space || Enter",
           "manipulators": [
               {
                   "from": {
                       "key_code": "spacebar",
-                      "modifiers": {
-                          "mandatory": [
-                              "right_command",
-                              "right_control",
-                              "right_shift",
-                              "right_option"
-                          ]
-                      }
-                  },
-                  "to": [
-                      {
-                          "key_code": "return_or_enter"
-                      }
-                  ],
-                  "type": "basic"
-              },
-              {
-                  "from": {
-                      "key_code": "h",
                       "modifiers": {
                           "mandatory": [
                               "right_command",
