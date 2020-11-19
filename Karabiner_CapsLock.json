@@ -1,6 +1,6 @@
 {
-  "title": "0 - XuDong - Capslock Enhancement",
-  "author": "Vonng(fengruohang@outlook.com)",
+  "title": "0 - WoJiaoChaDi - Capslock Enhancement",
+  "author": "WoJiaoChaDi",
   "homepage": "https://github.com/Vonng/Capslock",
   "hostpage": "https://pqrs.org/osx/karabiner/complex_modifications/",
   "manual": "https://github.com/Vonng/Capslock/tree/master/mac",
@@ -12,6 +12,7 @@
       /*==============================================================================================================*/
       /*   | * |    Command + Esc                   || 映射为Command + Q                                             ;*/
       /*   | * |    Command + E                     || 打开Finder                                                    ;*/
+      /*   | * |    Ctrl+Shift+Esc                  || 活动监视器                                                    ;*/
       /*   |   |    CapsLock                        || 超级修饰键                                                    ;*/
       /*   | * |    CapsLock + E/S/D/F   I/J/K/L    || 映射↑←↓→(Cmd移动鼠标、Option选择)                             ;*/
       /*   | * |    CapsLock + X/C                  || Home/End (Option 选择)                                        ;*/
@@ -94,6 +95,33 @@
 
 
 
+      /*=============================================================================================*/
+      /*                               Ctrl+Shift+Esc  || 活动监视器                                  ;*/
+      {
+          "description": "Ctrl+Shift+Esc  || 活动监视器",
+          "manipulators": [
+              {
+                  "from": {
+                      "key_code": "escape",
+                      "modifiers": {
+                          "mandatory": [
+                              "left_control",
+                              "left_shift"
+                          ]
+                      }
+                  },
+                  "to": [
+                      {
+                          "shell_command": "open -a 'Activity Monitor.app'"
+                      }
+                  ],
+                  "type": "basic"
+              }
+          ]
+      },
+
+
+
 
 
 
@@ -125,13 +153,16 @@
                               "right_option"
                           ]
                       }
-                  ],
+                  ]
+                  /*
+                  ,
                   "to_if_alone": [
                       {
                           "key_code": "escape"
                       }
                   ],
                   "type": "basic"
+                  */
               }
           ]
       },
