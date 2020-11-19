@@ -1905,8 +1905,27 @@
       /*=============================================================================================*/
       /*      CapsLock + F1/F2/F3/F4/F5/F6/F11/F12 || 媒体控制(静音/音量+/音量-/暂停/下一首/停止/屏幕亮度-/屏幕亮度+)             ;*/
       {
-          "description": "CapsLock + F1/F2/F3/F4/F5/F6| 媒体控制(静音/音量-/音量+/暂停/上一首/下一首)",
+          "description": "CapsLock + Esc/F1/F2/F3/F4/F5/F6| 媒体控制(启动台/静音/音量-/音量+/暂停/上一首/下一首)",
           "manipulators": [
+              {
+                  "from": {
+                      "key_code": "escape",
+                      "modifiers": {
+                          "mandatory": [
+                              "right_command",
+                              "right_control",
+                              "right_shift",
+                              "right_option"
+                          ]
+                      }
+                  },
+                  "to": [
+                      {
+                          "key_code": "launchpad"
+                      }
+                  ],
+                  "type": "basic"
+              },
               {
                   "from": {
                       "key_code": "f1",
